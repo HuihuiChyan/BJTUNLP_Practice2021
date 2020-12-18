@@ -1,9 +1,9 @@
 说明：
 
-1. 全体新加入研究组的同学，需要完成以下四个任务，希望尽可能在研一入学之前完成；
+1. 全体新加入研究组的同学，需要完成以下三个任务，完成的情况会反馈给导师，作为进一步培养的依据；
 2. 在模型写完并完成训练后，请联系程序练习负责人获取测试集，然后用自己训好的模型推断获得结果，处理成要求的格式，命名为result.txt，发给负责人，负责人会计算测试结果；
 3. 最后将全部代码+README.md说明文件打包成以自己学号命名的压缩包发给负责人；
-4. 前三个任务可以参考开源代码，但是最后提交的代码必须是自己写的；
+4. 可以参考开源代码，但是最后提交的代码必须是自己写的；
 5. 禁止使用除了训练集以外的任何数据用于训练，禁止使用验证集、测试集进行训练。
 
 ### 任务一：基于TextCNN的文本分类
@@ -31,33 +31,7 @@
 
 当前的SOTA排名：https://github.com/sebastianruder/NLP-progress/blob/master/english/sentiment_analysis.md
 
-### 任务二：基于BiLSTM+CRF的序列标注
-
-用BiLSTM+CRF来训练序列标注模型，以Named Entity Recognition为例。如果CRF你搞不明白，那就只用BiLSTM也行。
-
-数据集：CONLL 2003，https://www.clips.uantwerpen.be/conll2003/ner/
-
-参考论文：Neural Architectures for Named Entity Recognition，<https://arxiv.org/pdf/1603.01360.pdf> 
-
-模型图：
-
-<img src="BiLSTM&CRF.PNG" width="350"> 
-
-需要了解的知识点：
-
-1. RNN如何提取文本的特征
-2. 评价指标：precision、recall、F1
-3. CRF比较复杂，不理解没关系
-
-说明：
-
-1. 训练集、验证集、测试集已经分割好了，但是你仅使用训练集和验证集即可，最后我会再给你一个测试集；
-2. 如果数据下不下来，这个目录里有现成的数据：https://github.com/yuanxiaosc/BERT-for-Sequence-Labeling-and-Text-Classification ；
-3. 测试结果格式：每行对应一句话的标注结果，词之间用空格相分隔；
-
-当前的SOTA排名：https://github.com/sebastianruder/NLP-progress/blob/master/english/named_entity_recognition.md
-
-### 任务三：基于ESIM的文本匹配
+### 任务二：基于ESIM的文本匹配
 
 输入两个句子，判断它们之间的关系。参考ESIM（可以只用LSTM，忽略Tree-LSTM），用双向的注意力机制实现。
 
@@ -80,9 +54,9 @@
 
 当前的SOTA排名：https://nlp.stanford.edu/projects/snli/
 
-### 任务四：基于Bert的自然语言理解
+### 任务三：基于Bert的自然语言理解
 
-Bert可以用来进行分类、标注、匹配等多种自然语言理解任务。这里需要用Bert重新实现上述三个任务中的任意一个。（难度：任务一 < 任务三 < 任务二）
+Bert可以用来进行分类、标注、匹配等多种自然语言理解任务。这里需要用Bert重新实现上述两个任务中的任意一个。
 
 建议使用的框架：Huggingface，https://github.com/huggingface/transformers
 
