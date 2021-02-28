@@ -34,8 +34,8 @@
 
 | 本科学号 | 测试时间 | model_architecture  | l_rate | batch | test_F1  | 说明 | 
 | ------- | -------- | -------- | ------ | ----- | -------- | ----- |
-| &nbsp;&nbsp;&nbsp;&nbsp;170219&nbsp;&nbsp;&nbsp;&nbsp; | 2021/01/01 | 单层BiLSTM | 1e-3 | 16 | 88.94 | 自己重写的师兄的代码，在自己电脑跑的 |
-| &nbsp;&nbsp;&nbsp;&nbsp;170219&nbsp;&nbsp;&nbsp;&nbsp; | 2021/01/20 | 单层BiLSTM | 1e-3 | 16 | 85.26 | 代码在服务器上的结果 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;170219&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 2021/01/01 | 单层BiLSTM | 1e-3 | 16 | 88.94 | 自己重写的师兄的代码，在自己电脑跑的 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;170219&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 2021/01/20 | 单层BiLSTM | 1e-3 | 16 | 85.26 | 代码在服务器上的结果 |
 
 #### 实体抽取
 
@@ -43,7 +43,7 @@
 
 | 本科学号 | 测试时间 | model_architecture  | l_rate | batch | test_F1  | 说明 | 
 | ------- | -------- | -------- | ------ | ----- | -------- | ----- |
-| 17190019 | 2020/01/17 | bigru_attention_crf | 1e-3 | 64 | 0.9531 | epoch=100, 学习率衰减 min_lr=5e-5 |
+| &nbsp;&nbsp;17190019&nbsp;&nbsp; | 2020/01/17 | bigru_attention_crf | 1e-3 | 64 | 0.9531 | epoch=100, 学习率衰减 min_lr=5e-5 |
 
 | 本科学号 | 测试时间 | model_architecture  | l_rate | batch | test_F1  | 说明 | 
 | ------- | -------- | -------- | ------ | ----- | -------- | ----- |
