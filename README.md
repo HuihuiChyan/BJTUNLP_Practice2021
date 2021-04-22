@@ -26,6 +26,10 @@
 | 5    | 17271137 | 89.98% |2021年02月09日  |
 | 6    | 170219 | 89.28% |2021年03月28日  | 
 
+#### 序列标注：
+
+因为今年的保研生毕设都是序列标注，所以这个任务暂时不用提交
+
 #### 文本匹配：
 
 | 序号 | 学号       | 准确率 | 最终提交时间      | 说明  |
@@ -60,7 +64,33 @@
 
 当前的SOTA排名：https://github.com/sebastianruder/NLP-progress/blob/master/english/sentiment_analysis.md
 
-### 任务二：基于ESIM的文本匹配
+### 任务二：基于BiLSTM+CRF的序列标注
+
+用BiLSTM+CRF来训练序列标注模型，以Named Entity Recognition为例。如果CRF你搞不明白，那就只用BiLSTM也行。
+
+数据集：CONLL 2003，https://www.clips.uantwerpen.be/conll2003/ner/
+
+参考论文：Neural Architectures for Named Entity Recognition，<https://arxiv.org/pdf/1603.01360.pdf> 
+
+模型图：
+
+<img src="BiLSTM&CRF.PNG" width="350"> 
+
+需要了解的知识点：
+
+1. RNN如何提取文本的特征
+2. 评价指标：precision、recall、F1
+3. CRF比较复杂，不理解没关系
+
+说明：
+
+1. 训练集、验证集、测试集已经分割好了，但是你仅使用训练集和验证集即可，最后我会再给你一个测试集；
+2. 如果数据下不下来，这个目录里有现成的数据：https://github.com/yuanxiaosc/BERT-for-Sequence-Labeling-and-Text-Classification ；
+3. 测试结果格式：每行对应一句话的标注结果，词之间用空格相分隔；
+
+当前的SOTA排名：https://github.com/sebastianruder/NLP-progress/blob/master/english/named_entity_recognition.md
+
+### 任务三：基于ESIM的文本匹配
 
 输入两个句子，判断它们之间的关系。参考ESIM（可以只用LSTM，忽略Tree-LSTM），用双向的注意力机制实现。
 
@@ -83,7 +113,7 @@
 
 当前的SOTA排名：https://nlp.stanford.edu/projects/snli/
 
-### 任务三：基于Bert的自然语言理解
+### 任务四：基于Bert的自然语言理解
 
 Bert可以用来进行分类、标注、匹配等多种自然语言理解任务。这里需要用Bert重新实现上述两个任务中的任意一个。
 
